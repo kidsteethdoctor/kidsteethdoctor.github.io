@@ -1,0 +1,187 @@
+// 	-----------------------------------------------------------------------------------
+//	 helper.sass
+//  -----------------------------------------------------------------------------------
+
+// Animated element block
+[data-sr]
+	visibility: hidden
+
+// Centered div
+.centered-div
+	margin-left: auto !important
+	margin-right: auto !important
+	float: none !important
+	
+// Background
+.theme-bg
+	background-color: $theme-color
+	color: #FFF
+
+// Visibility
+.ohidden
+	position: relative
+	overflow: hidden !important
+
+.hidden
+	display: none !important
+
+.hide-absolute-position  
+	position: relative !important
+
+.hide-shadow  
+	box-shadow: none
+
+// Padding
+.column-padding  
+	padding: 60px 
+
+.hide-padding  
+	padding: 0 !important 
+
+.hide-left-padding  
+	padding-left: 0 !important 
+
+.hide-right-padding  
+	padding-right: 0 !important 
+
+.hide-top-padding  
+	padding-top: 0 !important 
+
+.hide-bottom-padding  
+	padding-bottom: 0 !important 
+	
+// Margins
+.all-margin  
+	margin: 50px !important 
+
+.left-margin  
+	margin-left: 50px !important 
+
+.right-margin  
+	margin-right: 50px !important 
+
+.top-margin  
+	margin-top: 50px !important 
+
+.bottom-margin  
+	margin-bottom: 50px !important 
+
+.clear-bottom-margin  
+	margin-bottom: -50px !important 
+
+.all-margin-sm  
+	margin: 30px !important 
+
+.left-margin-sm  
+	margin-left: 30px !important 
+
+.right-margin-sm  
+	margin-right: 30px !important 
+
+.top-margin-sm  
+	margin-top: 30px !important 
+
+.bottom-margin-sm  
+	margin-bottom: 30px !important 
+
+.clear-bottom-margin-sm  
+	margin-bottom: -30px !important 
+
+.all-margin-lg  
+	margin: 80px !important 
+
+.left-margin-lg  
+	margin-left: 80px !important 
+
+.right-margin-lg  
+	margin-right: 80px !important 
+
+.top-margin-lg  
+	margin-top: 80px !important 
+
+.bottom-margin-lg  
+	margin-bottom: 80px !important 
+
+.clear-bottom-margin-lg  
+	margin-bottom: -80px !important 
+
+.hide-margin 
+	margin: 0 !important 
+
+.hide-left-margin  
+	margin-left: 0 !important 
+
+.hide-right-margin  
+	margin-right: 0 !important 
+
+.hide-top-margin  
+	margin-top: 0 !important 
+
+.hide-bottom-margin  
+	margin-bottom: 0 !important 
+
+// Borders
+.hide-border
+	border: none !important
+
+.hide-left-border  
+	border-left: none !important 
+
+.hide-right-border  
+	border-right: none !important 
+
+.hide-top-border  
+	border-top: none !important 
+
+.hide-bottom-border  
+	border-bottom: none !important 
+
+.hide-radius
+	+border-radius(0 !important)
+
+// Links
+.underlined-link
+	font-weight: 400
+	border-bottom-width: 1px
+	border-bottom: 1px solid $theme-color
+	display: inline-block
+	padding: 2px 0
+	font-size: 15px
+
+	+breakpoint(medium)
+		font-size: 18px
+
+	&:hover
+		border-color: $body-color
+		color: $body-color
+
+// Text sizes
+.large-text
+	font-size: 40px
+
+	+breakpoint(small)
+		font-size: 58px
+
+	+breakpoint(medium)
+		font-size: 72px
+
+	+breakpoint(large)
+		font-size: 94px
+
+.text-uppercase
+	text-transform: uppercase
+
+// Font weight
+.fw400
+	font-weight: 400
+
+.fw500
+	font-weight: 500
+
+.fw700
+	font-weight: 700
+
+// Alignment
+.absolute-centered
+	height: auto !important
+	left: 0

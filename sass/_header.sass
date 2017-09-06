@@ -1,0 +1,100 @@
+// 	-----------------------------------------------------------------------------------
+//	 header.sass
+//  -----------------------------------------------------------------------------------
+
+#header
+	position: fixed
+	width: 100%
+	z-index: 200
+	background-color: rgba(255,255,255,0.97)
+	+box-shadow(0px 1px 2px rgba(0,0,0,0.2))
+	+transition(all .2s ease)
+
+	+breakpoint(large)
+		top: -80px
+
+.show-header-nav
+	top: 0 !important
+
+// Navigation
+#primary-menu
+	float: none
+
+	+breakpoint(large)
+		float: right
+
+	.menu
+		float: none
+		display: none
+
+		+breakpoint(large)
+			float: right
+			display: block
+
+	a
+		font-family: $heading-font
+		font-size: 12px
+		text-transform: uppercase
+		letter-spacing: 0.2em
+		color: $heading-color
+		height: auto
+		line-height: 14px
+
+		+breakpoint(large)
+			line-height: 48px
+			height: 70px
+
+	ul > li.current a,
+	ul > li a:hover
+		color: $theme-color !important
+		+transition(color .2s ease-out, background 2s ease-in)
+
+	.menu > li
+		display: block
+
+		+breakpoint(large)
+			display: table-cell
+
+		> a
+			padding: 1rem 0
+
+			+breakpoint(large)
+				padding: 0.7rem 1rem
+
+		&:last-child > a
+			padding-right: 0
+			padding-bottom: 30px
+
+	.menu.show
+		display: block
+		text-align: center
+
+// Logo
+#logo
+	display: block
+	float: none
+	margin: 0 auto 0 !important
+	max-width: none
+	text-align: center
+
+	+breakpoint(large)
+		float: left
+		text-align: left
+
+// Mobile Menuss
+#primary-menu-trigger
+	opacity: 1
+	cursor: pointer
+	font-size: 28px
+	position: absolute
+	z-index: 10
+	top: 8px
+	width: 50px
+	height: 50px
+	line-height: 50px
+	text-align: center
+	+transition(opacity .2s ease)
+
+	+breakpoint(large)
+		opacity: 0
+		display: none

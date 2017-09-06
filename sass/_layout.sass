@@ -1,0 +1,83 @@
+// 	-----------------------------------------------------------------------------------
+//	 layout.sass
+//  -----------------------------------------------------------------------------------
+
+.row
+	padding-left: 20px
+	padding-right: 20px
+
+	+breakpoint(small)
+		padding-left: 0
+		padding-right: 0
+
+.row.expanded
+	padding-left: 0
+	padding-right: 0
+		
+.columns
+	position: relative
+
+#main-content .row
+	position: relative
+		
+// Section
+.section-page
+	padding: 100px 0
+	//+clearfix()
+	position: relative
+	overflow: hidden
+
+.parallax
+	background-color: transparent
+	background-attachment: fixed
+	background-position: 50% 0
+	background-repeat: no-repeat
+	overflow: hidden
+
+.mobile-parallax,
+.video-placeholder 
+	background-size: cover !important
+	background-attachment: scroll !important
+	background-position: center center
+
+.section-page .row  
+	z-index: 2 
+
+.section-page .row + .video-wrap  
+	z-index: 1 
+
+
+// Overlay background
+.overlay
+	width: 100%
+	position: relative
+	z-index: 10
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	color: #EEE
+
+	&:after
+		width: 100%
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		opacity: .9
+		z-index: -1
+		background-color: rgba(59,67,71,.9)
+
+.overlay.dark-overlay
+	&:after
+		background-color: rgba(0,0,0,.8)
+
+.overlay-bg
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	z-index: 1
+	background-color: rgba(59, 67, 71, 0.8)

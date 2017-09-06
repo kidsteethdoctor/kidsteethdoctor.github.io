@@ -1,0 +1,73 @@
+// 	-----------------------------------------------------------------------------------
+//	 Shortcodes - pricing-tables.sass
+//  -----------------------------------------------------------------------------------
+
+.pricing-table
+	.plan
+		background-color: #FFF
+		border: 1px solid $table-border-color
+		cursor: pointer
+		margin-bottom: 20px
+		max-width: 360px
+		margin-left: auto
+		margin-right: auto
+
+		&:hover
+			+box-shadow(0 0 4px rgba(0,0,0,0.1))
+
+		.plan-header
+			border-bottom: 1px solid
+			border-bottom-color: $table-border-color
+			padding: 30px 20px 20px
+			text-align: center
+
+			.plan-price
+				font-size: 50px
+				line-height: 1
+				font-family: $heading-font
+				margin-bottom: 20px
+
+				.symbol
+					font-size: 20px
+					vertical-align: top
+					position: relative
+					margin: 7px 0
+					display: inline-block
+
+				.term
+					font-size: 20px
+					vertical-align: bottom
+					color: #B5BFC3
+					display: inline-block
+
+			.plan-name
+				color: $theme-color
+				font-size: 18px
+				text-transform: uppercase
+				letter-spacing: 1px
+
+		.plan-list
+			padding-top: 20px
+
+			ul
+				display: table
+				margin: 0 auto
+				padding: 0 40px
+
+				li
+					list-style: none
+					border-bottom: 1px solid #EAECEB
+					line-height: 40px
+
+					&:last-child
+						border-bottom: 0
+
+					i
+						margin-right: 12px
+
+		.plan-footer
+			padding: 20px
+			text-align: center
+
+	.plan.featured
+		+box-shadow(0 0 3px rgba(0,0,0,0.1))

@@ -1,0 +1,77 @@
+// 	-----------------------------------------------------------------------------------
+//	 Shortcodes - headings.sass
+//  -----------------------------------------------------------------------------------
+
+// heading blocks
+.heading-block
+	margin-bottom: 40px
+
+	h3
+		margin: 0
+		letter-spacing: 1px
+		text-transform: uppercase
+
+	~ p:not(.lead)
+		font-size: 15px
+		
+
+// Stand out title
+.stand-out-title
+	margin: 0
+	
+	+breakpoint(large)
+		margin-bottom: 20px
+	
+	h1,
+	h2
+		font-size: 60px
+		letter-spacing: 1px
+		font-weight: 300
+
+		strong
+			font-weight: 700
+
+#main-content
+	.stand-out-title
+		h1,
+		h2
+			font-family: $general-font
+			font-size: 28px
+
+			+breakpoint(medium)
+				font-size: 48px
+
+// Lead paragraph/text
+.lead
+	font-weight: 300
+	letter-spacing: .04em
+	font-size: 16px
+	padding: 0
+
+	+breakpoint(medium)
+		font-size: 20px
+		line-height: 1.8
+		padding: 0 15px
+		
+// section title
+.section-title-block
+	margin-bottom: 50px
+	padding: 0 10px
+
+	+breakpoint(small)
+		padding: 0
+		margin-bottom: 80px
+
+	&:after
+		content: ""
+		display: block
+		width: 40px
+		border-top: 2px solid #111
+
+	.title
+		font-family: $heading-font
+		font-weight: 700
+
+.section-title-block.text-center
+	&:after
+		margin: 30px auto 0

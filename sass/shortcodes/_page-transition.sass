@@ -1,0 +1,265 @@
+// 	-----------------------------------------------------------------------------------
+//	 Shortcodes - page-transition.sass
+//  -----------------------------------------------------------------------------------
+
+//colors
+$white: #fff
+$color_alto_approx: #459CE8
+
+//@extend-elements
+//original selectors
+//body:not(.no-transition) #wrapper, .animsition-overlay
+.extend_1 
+	position: relative
+	opacity: 0
+	animation-fill-mode: both
+
+
+//original selectors
+//.css3-spinner >.css3-spinner-double-bounce1, .css3-spinner >.css3-spinner-double-bounce2
+.extend_2 
+	width: 40px
+	height: 40px
+	margin-top: -20px
+	margin-left: -20px
+	//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+	border-radius: 50%
+	opacity: 0.6
+	animation: cssspinnerbounce 2.0s infinite ease-in-out
+
+
+//original selectors
+//.css3-spinner >.css3-spinner-rect1, .css3-spinner >.css3-spinner-rect2, .css3-spinner >.css3-spinner-rect3, .css3-spinner >.css3-spinner-rect4, .css3-spinner >.css3-spinner-rect5
+.extend_3 
+	height: 30px
+	width: 6px
+	margin-top: -15px
+	margin-left: -21px
+	//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+	border-radius: 0
+	animation: stretchdelay 1.2s infinite ease-in-out
+
+
+//original selectors
+//.css3-spinner >.css3-spinner-cube1, .css3-spinner >.css3-spinner-cube2
+.extend_4 
+	width: 16px
+	height: 16px
+	//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+	border-radius: 0
+	margin-top: -20px
+	margin-left: -20px
+	animation: cubemove 1.8s infinite ease-in-out
+
+
+//original selectors
+//.css3-spinner-ball-rotate >div:nth-child(1), .css3-spinner-ball-rotate >div:nth-child(3)
+.extend_5 
+	width: 12px
+	height: 12px
+	//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+	border-radius: 100%
+	content: ""
+	position: absolute
+	opacity: 0.7
+
+
+
+.animsition-overlay 
+	@extend .extend_1
+
+.css3-spinner 
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	z-index: 1000
+	text-align: center
+	background-color: $white
+	animation-fill-mode: both
+	> div 
+		position: absolute
+		top: 50%
+		left: 50%
+		margin-top: -9px
+		margin-left: 13px
+		width: 18px
+		height: 18px
+		background-color: $color_alto_approx
+		//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+		border-radius: 100%
+		display: inline-block
+		animation: bouncedelay 1.4s infinite ease-in-out
+		animation-fill-mode: both
+
+	.css3-spinner-bounce1 
+		margin-left: -31px
+		animation-delay: -0.32s
+
+	.css3-spinner-bounce2 
+		margin-left: -9px
+		animation-delay: -0.16s
+
+	> 
+
+		.css3-spinner-clip-rotate 
+			width: 73px
+			height: 73px
+			margin-top: -17px
+			margin-left: -17px
+			background-color: transparent !important
+			animation: none
+
+		.css3-spinner-ball-scale-multiple 
+			width: 120px
+			height: 120px
+			margin-left: -60px
+			margin-top: -60px
+			background-color: transparent !important
+			animation: none
+
+
+@-webkit-keyframes bouncedelay 
+	0% 
+
+	80% 
+
+	100% 
+
+	40% 
+
+
+@keyframes bouncedelay 
+	0% 
+		//If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(0.0)
+
+	80% 
+		//If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(0.0)
+
+	100% 
+		//If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(0.0)
+
+	40% 
+		//If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(1.0)
+
+
+
+@-webkit-keyframes cssspinnerbounce 
+	0% 
+
+	100% 
+
+	50% 
+
+
+@keyframes cssspinnerbounce 
+	0% 
+		//If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(0.0)
+
+	100% 
+		//If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(0.0)
+
+	50% 
+		//If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(1.0)
+
+
+
+
+
+@keyframes rotate 
+	0% 
+		//If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(0deg) scale(1)
+
+	50% 
+		//If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(180deg) scale(0.6)
+
+	100% 
+		//If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(360deg) scale(1)
+
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes ball-scale-multiple 
+	0% 
+		//If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(0)
+		opacity: 0
+
+	5% 
+		opacity: 1
+
+	100% 
+		//If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(1)
+		opacity: 0
+
+
+@keyframes ball-scale-multiple 
+	0% 
+		//If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(0)
+		opacity: 0
+
+	5% 
+		opacity: 1
+
+	100% 
+		//If you use compass, instead of the line below you could use + transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: scale(1)
+		opacity: 0
+
+
+
+
+
+
+
+body:not(.no-transition) #wrapper 
+	@extend .extend_1
+
+
+
+.css3-spinner-clip-rotate > div 
+	//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+	border-radius: 100%
+	border: 2px solid $color_alto_approx
+	border-bottom-color: transparent !important
+	height: 73px
+	width: 73px
+	background: transparent !important
+	animation: rotate 1s 0s linear infinite
+
+
+.css3-spinner-ball-scale-multiple > div 
+	background-color: $color_alto_approx
+	//If you use compass, instead of the line below you could use + border-radius($radius, $vertical-radius)
+	border-radius: 100%
+	position: absolute
+	left: 0
+	top: 0
+	opacity: 0
+	width: 120px
+	height: 120px
+	animation: ball-scale-multiple 1.25s 0s linear infinite
+	&:nth-child(2) 
+		animation-delay: -0.4s
+
+	&:nth-child(3) 
+		animation-delay: -0.2s

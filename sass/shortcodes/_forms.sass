@@ -1,0 +1,90 @@
+// 	-----------------------------------------------------------------------------------
+//	 Shortcodes - forms.sass
+//  -----------------------------------------------------------------------------------
+
+[type='text'], 
+[type='password'], 
+[type='date'], 
+[type='datetime'], 
+[type='datetime-local'], 
+[type='month'], 
+[type='week'], 
+[type='email'], 
+[type='number'], 
+[type='search'], 
+[type='tel'], 
+[type='time'], 
+[type='url'], 
+[type='color'], 
+textarea
+	+box-shadow(none !important) 
+
+input:-webkit-autofill
+	background-color: transparent !important
+
+form
+
+	label
+		margin-bottom: 10px
+
+	label.error
+		display: none !important
+
+	input.error,
+	textarea.error
+		border-color: #ec5840 !important
+
+#wp-contact-form
+	position: relative
+
+.form-processing
+	display: none
+
+	.fa
+		position: absolute
+		z-index: 3
+		top: 40%
+		left: 50%
+
+// Contact form style 1
+#contact-content
+
+	.contact-section
+
+		.content
+			margin-bottom: 2em
+			border-bottom: 1px solid #8a9094
+
+		.contact-info 
+
+			.header p
+				font-family: $heading-font
+				letter-spacing: 2px
+				margin: 2em 0 1.5em
+				text-transform: uppercase
+				color: #FFF
+
+			.method
+				margin-bottom: 1em
+				display: table
+				width: 100%
+
+			.label
+				font-weight: 700
+				float: left
+				margin-right: 10px
+
+			.details
+				margin-left: 40px
+				line-height: 20px
+
+	.contact-form
+		margin-bottom: 0
+
+		input:not(.button),
+		textarea
+			border: 1px solid #8a9094
+
+		label
+			font-size: .8125rem
+			letter-spacing: 1px

@@ -1,0 +1,506 @@
+// 	-----------------------------------------------------------------------------------
+//	 Shortcodes - social-icons.sass
+//  -----------------------------------------------------------------------------------
+
+.wp-icon a 
+	display: block 
+	width: 100% 
+	height: 100%  
+	position: absolute 
+	top: 0px 
+	z-index: 100 
+
+.wp-icon 
+	display: inline-block
+	font-size: 0px
+	cursor: pointer
+	margin: 3px
+	width: 45px
+	height: 45px
+	text-align: center
+	position: relative
+	z-index: 1
+	color: $theme-color
+
+	&:after 
+		pointer-events: none
+		position: absolute
+		width: 100%
+		height: 100%
+		content: ''
+		+box-sizing(content-box)
+
+	&:before  
+		speak: none
+		font-size: 22px
+		line-height: 45px
+		font-style: normal
+		font-weight: normal
+		font-variant: normal
+		text-transform: none
+		display: block
+		-webkit-font-smoothing: antialiased
+
+// Size
+.wp-icon-small
+	width: 35px
+	height: 35px
+
+	&:before
+		font-size: 18px
+		line-height: 35px
+
+.wp-icon-large
+	width: 56px
+	height: 56px
+
+	&:before
+		font-size: 30px
+		line-height: 56px
+	
+// Effects
+.wp-icon-animate .wp-icon
+	overflow: hidden
+	+transition(background 0.3s, color 0.3s)
+
+.wp-icon-animate .wp-icon:after
+	display: none
+
+.no-touch .wp-icon-animate .wp-icon:hover
+	background: $theme-color
+	color: #FFF
+
+// Effect 1 - To Right From Left
+.no-touch .wp-icon-effect-rfl .wp-icon:hover:before
+	-webkit-animation: toRightFromLeft 0.3s forwards
+	-moz-animation: toRightFromLeft 0.3s forwards
+	animation: toRightFromLeft 0.3s forwards
+
+@-webkit-keyframes toRightFromLeft
+	49%
+		-webkit-transform: translate(100%)
+	
+	50% 
+		opacity: 0
+		-webkit-transform: translate(-100%)
+	
+	51% 
+		opacity: 1
+	
+@-moz-keyframes toRightFromLeft 
+	49% 
+		-moz-transform: translate(100%)
+	
+	50% 
+		opacity: 0
+		-moz-transform: translate(-100%)
+	
+	51% 
+		opacity: 1
+
+@keyframes toRightFromLeft 
+	49% 
+		transform: translate(100%)
+	
+	50% 
+		opacity: 0
+		transform: translate(-100%)
+	
+	51% 
+		opacity: 1
+	
+// Effect 2 - To Left From Right
+.no-touch .wp-icon-effect-lfr .wp-icon:hover:before
+	-webkit-animation: toLeftFromRight 0.3s forwards
+	-moz-animation: toLeftFromRight 0.3s forwards
+	animation: toLeftFromRight 0.3s forwards
+
+@-webkit-keyframes toLeftFromRight 
+	49% 
+		-webkit-transform: translate(-100%)
+	
+	50% 
+		opacity: 0
+		-webkit-transform: translate(100%)
+	
+	51% 
+		opacity: 1
+
+@-moz-keyframes toLeftFromRight 
+	49% 
+		-moz-transform: translate(-100%)
+	
+	50% 
+		opacity: 0
+		-moz-transform: translate(100%)
+	
+	51% 
+		opacity: 1
+	
+@keyframes toLeftFromRight 
+	49% 
+		transform: translate(-100%)
+	
+	50% 
+		opacity: 0
+		transform: translate(100%)
+	
+	51% 
+		opacity: 1
+	
+// Effect 3 - To Top From Bottom
+.no-touch .wp-icon-effect-tfb .wp-icon:hover:before 
+	-webkit-animation: toTopFromBottom 0.3s forwards
+	-moz-animation: toTopFromBottom 0.3s forwards
+	animation: toTopFromBottom 0.3s forwards
+
+@-webkit-keyframes toTopFromBottom 
+	49% 
+		-webkit-transform: translateY(-100%)
+	
+	50% 
+		opacity: 0
+		-webkit-transform: translateY(100%)
+	
+	51% 
+		opacity: 1
+	
+@-moz-keyframes toTopFromBottom 
+	49% 
+		-moz-transform: translateY(-100%)
+	
+	50% 
+		opacity: 0
+		-moz-transform: translateY(100%)
+	
+	51% 
+		opacity: 1
+
+@keyframes toTopFromBottom 
+	49% 
+		transform: translateY(-100%)
+	
+	50% 
+		opacity: 0
+		transform: translateY(100%)
+	
+	51% 
+		opacity: 1
+
+// Effect 4 - To Bottom From Top
+.no-touch .wp-icon-effect-bft .wp-icon:hover:before 
+	-webkit-animation: toBottomFromTop 0.3s forwards
+	-moz-animation: toBottomFromTop 0.3s forwards
+	animation: toBottomFromTop 0.3s forwards
+
+
+@-webkit-keyframes toBottomFromTop 
+	49% 
+		-webkit-transform: translateY(100%)
+	
+	50% 
+		opacity: 0
+		-webkit-transform: translateY(-100%)
+	
+	51% 
+		opacity: 1
+	
+@-moz-keyframes toBottomFromTop 
+	49% 
+		-moz-transform: translateY(100%)
+	
+	50% 
+		opacity: 0
+		-moz-transform: translateY(-100%)
+	
+	51% 
+		opacity: 1
+	
+@keyframes toBottomFromTop 
+	49% 
+		transform: translateY(100%)
+	
+	50% 
+		opacity: 0
+		transform: translateY(-100%)
+	
+	51% 
+		opacity: 1
+	
+// Social Icons - BG Color
+.wp-icon-bg-color 
+	border-color: transparent !important 
+
+	i  
+		color: #FFF 
+
+// Social Icons Bg color
+.wp-icon-facebook:hover,
+.wp-icon-bg-color.wp-icon-facebook  
+	background-color: #3B5998 !important 
+
+.wp-icon-delicious:hover,
+.wp-icon-colored.wp-icon-delicious  
+	background-color: #205CC0 !important 
+
+.wp-icon-paypal:hover,
+.wp-icon-colored.wp-icon-paypal  
+	background-color: #00588B !important 
+
+.wp-icon-android:hover,
+.wp-icon-colored.wp-icon-android  
+	background-color: #A4C639 !important 
+
+.wp-icon-google-plus:hover,
+.wp-icon-colored.wp-icon-google-plus  
+	background-color: #DD4B39 !important 
+
+.wp-icon-wikipedia:hover,
+.wp-icon-colored.wp-icon-wikipedia  
+	background-color: #333 !important 
+
+.wp-icon-stumbleupon:hover,
+.wp-icon-colored.wp-icon-stumbleupon  
+	background-color: #F74425 !important 
+
+.wp-icon-foursquare:hover,
+.wp-icon-colored.wp-icon-foursquare  
+	background-color: #25A0CA !important 
+
+.wp-icon-digg:hover,
+.wp-icon-colored.wp-icon-digg  
+	background-color: #191919 !important 
+
+.wp-icon-spotify:hover,
+.wp-icon-colored.wp-icon-spotify  
+	background-color: #81B71A !important 
+
+.wp-icon-reddit:hover,
+.wp-icon-colored.wp-icon-reddit  
+	background-color: #C6C6C6 !important 
+
+.wp-icon-dribbble:hover,
+.wp-icon-colored.wp-icon-dribbble  
+	background-color: #EA4C89 !important 
+
+.wp-icon-flickr:hover,
+.wp-icon-colored.wp-icon-flickr  
+	background-color: #FF0084 !important 
+
+.wp-icon-google:hover,
+.wp-icon-colored.wp-icon-google  
+	background-color: #DD4B39 !important 
+
+.wp-icon-linkedin:hover,
+.wp-icon-colored.wp-icon-linkedin  
+	background-color: #0E76A8 !important 
+
+.wp-icon-rss:hover,
+.wp-icon-colored.wp-icon-rss  
+	background-color: #EE802F !important 
+
+.wp-icon-skype:hover,
+.wp-icon-colored.wp-icon-skype  
+	background-color: #00AFF0 !important 
+
+.wp-icon-twitter:hover,
+.wp-icon-colored.wp-icon-twitter  
+	background-color: #00ACEE !important 
+
+.wp-icon-youtube:hover,
+.wp-icon-colored.wp-icon-youtube  
+	background-color: #C4302B !important 
+
+.wp-icon-vimeo:hover,
+.wp-icon-colored.wp-icon-vimeo  
+	background-color: #86C9EF !important 
+
+.wp-icon-yahoo:hover,
+.wp-icon-colored.wp-icon-yahoo  
+	background-color: #720E9E !important 
+
+.wp-icon-dropbox:hover,
+.wp-icon-colored.wp-icon-dropbox  
+	background-color: #3D9AE8 !important 
+
+.wp-icon-github:hover,
+.wp-icon-colored.wp-icon-github  
+	background-color: #171515 !important 
+
+.wp-icon-soundcloud:hover,
+.wp-icon-colored.wp-icon-soundcloud  
+	background-color: #FF7700 !important 
+
+.wp-icon-tumblr:hover,
+.wp-icon-colored.wp-icon-tumblr  
+	background-color: #34526F !important 
+
+.wp-icon-wordpress:hover,
+.wp-icon-colored.wp-icon-wordpress  
+	background-color: #1E8CBE !important 
+
+.wp-icon-yelp:hover,
+.wp-icon-colored.wp-icon-yelp  
+	background-color: #C41200 !important 
+
+.wp-icon-scribd:hover,
+.wp-icon-colored.wp-icon-scribd  
+	background-color: #666666 !important 
+
+.wp-icon-print:hover,
+.wp-icon-colored.wp-icon-print  
+	background-color: #111 !important 
+
+.wp-icon-drupal:hover,
+.wp-icon-colored.wp-icon-drupal  
+	background-color: #27537A !important 
+
+.wp-icon-bitbucket:hover,
+.wp-icon-colored.wp-icon-bitbucket  
+	background-color: #0E4984 !important 
+
+.wp-icon-stackoverflow:hover,
+.wp-icon-colored.wp-icon-stackoverflow  
+	background-color: #EF8236 !important 
+
+.wp-icon-hackernews:hover,
+.wp-icon-colored.wp-icon-hackernews  
+	background-color: #FF6600 !important
+
+.wp-icon-xing:hover,
+.wp-icon-colored.wp-icon-xing  
+	background-color: #126567 !important
+
+.wp-icon-instagram:hover,
+.wp-icon-colored.wp-icon-instagram  
+	background-color: #3F729B !important 
+
+.wp-icon-steam:hover,
+.wp-icon-colored.wp-icon-steam  
+	background-color: #111 !important 
+
+.wp-icon-amazon:hover,
+.wp-icon-colored.wp-icon-amazon  
+	background-color: #E47911 !important 
+
+.wp-icon-pinterest:hover,
+.wp-icon-colored.wp-icon-pinterest  
+	background-color: #C8232C !important 
+
+// Social Icons Text Color
+.wp-icon-text-color.wp-icon-facebook
+	color: #3B5998  
+
+.wp-icon-text-color.wp-icon-delicious
+	color: #205CC0 
+
+.wp-icon-text-color.wp-icon-paypal
+	color: #00588B 
+
+.wp-icon-text-color.wp-icon-android 
+	color: #A4C639 
+
+.wp-icon-text-color.wp-icon-google-plus 
+	color: #DD4B39 
+
+.wp-icon-text-color.wp-icon-wikipedia
+	color: #333 
+
+.wp-icon-text-color.wp-icon-stumbleupon 
+	color: #F74425 
+
+.wp-icon-text-color.wp-icon-foursquare   
+	color: #25A0CA 
+
+.wp-icon-text-color.wp-icon-digg 
+	color: #191919 
+
+.wp-icon-text-color.wp-icon-spotify   
+	color: #81B71A 
+
+.wp-icon-text-color.wp-icon-reddit   
+	color: #C6C6C6 
+
+.wp-icon-text-color.wp-icon-dribbble   
+	color: #EA4C89 
+
+.wp-icon-text-color.wp-icon-flickr   
+	color: #FF0084 
+
+.wp-icon-text-color.wp-icon-google   
+	color: #DD4B39 
+
+.wp-icon-text-color.wp-icon-linkedin   
+	color: #0E76A8 
+
+.wp-icon-text-color.wp-icon-rss   
+	color: #EE802F 
+
+.wp-icon-text-color.wp-icon-skype   
+	color: #00AFF0 
+
+.wp-icon-text-color.wp-icon-twitter   
+	color: #00ACEE 
+
+.wp-icon-text-color.wp-icon-youtube   
+	color: #C4302B 
+
+.wp-icon-text-color.wp-icon-vimeo   
+	color: #86C9EF 
+
+.wp-icon-text-color.wp-icon-yahoo   
+	color: #720E9E 
+
+.wp-icon-text-color.wp-icon-dropbox   
+	color: #3D9AE8 
+
+.wp-icon-text-color.wp-icon-github   
+	color: #171515 
+
+.wp-icon-text-color.wp-icon-soundcloud   
+	color: #FF7700 
+
+.wp-icon-text-color.wp-icon-tumblr   
+	color: #34526F 
+
+.wp-icon-text-color.wp-icon-wordpress   
+	color: #1E8CBE 
+
+.wp-icon-text-color.wp-icon-yelp   
+	color: #C41200 
+
+.wp-icon-text-color.wp-icon-scribd   
+	color: #666666 
+
+.wp-icon-text-color.wp-icon-print   
+	color: #111 
+
+.wp-icon-text-color.wp-icon-drupal   
+	color: #27537A 
+
+.wp-icon-text-color.wp-icon-bitbucket   
+	color: #0E4984 
+
+.wp-icon-text-color.wp-icon-stackoverflow   
+	color: #EF8236 
+
+.wp-icon-text-color.wp-icon-hackernews   
+	color: #FF6600 
+
+.wp-icon-text-color.wp-icon-xing   
+	color: #126567 
+
+.wp-icon-text-color.wp-icon-instagram   
+	color: #3F729B 
+
+.wp-icon-text-color.wp-icon-steam  
+	color: #111 
+
+.wp-icon-text-color.wp-icon-amazon   
+	color: #E47911 
+
+.wp-icon-text-color.wp-icon-pinterest   
+	color: #C8232C 
+
+.wp-icon-text-color:hover
+	color: #FFF 

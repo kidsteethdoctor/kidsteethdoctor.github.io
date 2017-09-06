@@ -1,0 +1,77 @@
+// 	-----------------------------------------------------------------------------------
+//	 dark-theme.sass
+//  -----------------------------------------------------------------------------------
+
+// Initialize
+@import compass
+@import variables
+@import mixins
+
+// Header navigation
+#header.dark-bg
+	background-color: rgba(59,67,71,.9)
+
+	#primary-menu a
+		color: #FFF
+
+		&:hover
+			color: $theme-color
+
+
+
+.dark-bg // our main dark theme class
+
+	// Header
+	#primary-menu-trigger
+		color: #FFF
+
+	// Global
+	a
+		&:hover,
+		&:focus
+			color: #FFF
+
+	h1, h2, h3, h4, h5, h6
+		color: #FFF
+
+	// Icons
+	.wp-icon
+		color: #fff!important
+
+	// Headings
+	.section-title-block
+
+		.title
+			color: #FFF
+
+		&:after
+			border-top: 2px solid #FFF
+
+	.lead
+		color: #FFF
+
+	// Forms
+	form
+
+		input:not(.button),
+		textarea,
+		select
+			background: none
+			color: #FFF
+
+		label
+			color: #FFF
+
+		input.error,
+		textarea.error
+			border-color: #ff4c4c !important
+
+	.form-processing
+		color: #FFF
+		
+	#contact-content .contact-section .contact-info .details a
+		color: #FFF
+
+	// Sliders
+	.text-rotator
+		color: #FFF !important
