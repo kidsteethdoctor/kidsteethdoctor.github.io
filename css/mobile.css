@@ -1,0 +1,9 @@
+.image1 {
+	width: 260px;
+}
+
+@media only screen and (max-width: 500px){
+	.image1 {
+		width: 10px;
+	}
+}
